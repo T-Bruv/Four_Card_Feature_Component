@@ -1,0 +1,123 @@
+/* Import the 'Poppins' font from Google Fonts */
+@import url('https://fonts.google.com/specimen/Poppins');
+/* Styles for the page wrapper */
+.wrapper {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    background: hsl(0, 0%, 98%);
+    padding: 20px 0;
+}
+/* Styles for heading elements h1 and h2 */
+h1, h2 {
+    color: hsl(234, 12%, 34%);
+    margin: 0;
+    margin-top: 10px;
+    font-size: 20px;
+}
+/* Styles for the caption section */
+.caption {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0 21px;
+    max-width: 78.4%;
+}
+/* Styles for caption text */
+.caption-text {
+    font-weight: 200;
+}
+/* Styles for the square-box section */
+.square-box {
+    display: grid;
+    gap: 30px;
+    padding: 29px;
+}
+/* Styles for individual boxes */
+.box {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 0 hsl(229, 6%, 66%);
+}
+/* Styles for h2 elements inside boxes */
+.box h2 {
+    margin-top: 0;
+}
+/* Styles for the supervisor box */
+#supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+/* Styles for the team-builder box */
+#team-builder {
+    border-top: 4px solid  hsl(0, 78%, 62%);
+}
+/* Styles for the karma box */
+#karma {
+    border-top: 4px solid  hsl(34, 97%, 64%);
+}
+/* Styles for the calculator box */
+#calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+/* Styles for box info text */
+.box-info {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* Styles for icons */
+.icon {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+/* Styles for the attribution section */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+/* Styles for links inside attribution */
+.attribution a {
+    color: hsl(0, 78%, 62%);
+}
+/* Media query for screens with a minimum width of 1024px */
+@media(min-width: 1024px) {
+    /* Limit the maximum width of the header */
+    .header {
+        max-width: 506px;
+    }
+    /* Reset top margin for h1 and h2 inside boxes */
+    h1, h2 {
+        margin-top: 0;
+    }
+    /* Increase font size for h1 */
+    h1 {
+        font-size: 2rem;
+    }
+    /* Adjust grid layout for larger screens */
+    .square-box {
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(4, 125px);
+        justify-content: center;
+    }
+    /* Adjust padding and height for boxes */
+    .box {
+        padding: 30px;
+        padding-bottom: 0;
+        height: 250px;
+    }
+    /* Adjust grid rows for specific boxes */
+    #supervisor, #calculator {
+        grid-row: 2 / 4;
+    }
+    #team-builder {
+        grid-row: 1/ 3;
+    }
+    #karma {
+        grid-row: 3 / 5;
+    }
+}
